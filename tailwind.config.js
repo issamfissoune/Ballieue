@@ -6,7 +6,8 @@ module.exports = {
       colors:{
         primary: '#2D6B51',
         secondary: '#16B874',
-        highlight: '#1CEB95'
+        highlight: '#1CEB95',
+        contrast: '#FF7518',
       },
       fontFamily: {
         pthin: ["Poppins-Thin", "sans-serif"],

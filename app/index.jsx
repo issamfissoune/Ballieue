@@ -1,16 +1,41 @@
 import {StatusBar} from "expo-status-bar";
-import {StyleSheet, Text, View} from 'react-native'
-import {Link} from 'expo-router'
+import {ScrollView, StyleSheet, Text, View, Image} from 'react-native'
+import {Redirect, router} from 'expo-router'
 import React from 'react'
 import {SafeAreaView} from "react-native-safe-area-context";
+import {images} from "../constants"
+import CustomButton from "../components/CustomButton";
 
 const Index = () => {
     return (
-        <View className="flex-1 items-center justify-center bg-primary">
-            <Text>Index</Text>
-            <StatusBar/>
-            <Link href="/home">Home</Link>
-        </View>
+        <SafeAreaView className="bg-primary h-full">
+            <ScrollView contentContainerStyle={{height: '100%'}}>
+              <View className="w-full flex justify-center items-center min-h-[85vh] px-4">
+                  <Image
+                      source={images.logo}
+                      className="w-[230px] h-[284px]"
+
+                  />
+                  <View className="relative mt-3">
+                      <Text className="text-3xl text-white font-bold text-center">
+                          Where champions begin {" "}
+                          <Text className="text-contrast">
+                               Welcome to Ballieue
+                          </Text>
+                      </Text>
+                  </View>
+                  <Text className="text-sm font-pregular text-white mt-7 text-center">
+                      Proof that you are the king of the fields, by playing matches and winning prizes.
+                  </Text>
+                  <CustomButton
+                    title="Inloggen met Email"
+                    handlePress={()=>router.push('/sign-in')}
+                    containerStyles="w-full mt-7"
+                  />
+              </View>
+            </ScrollView>
+            <StatusBar backgroundColor='#161622' style='light'/>
+        </SafeAreaView>
     )
 }
 export default Index
