@@ -13,13 +13,15 @@
       "backgroundColor": "#2D6B51"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "package": "com.IssamFissoune.Ballieue"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/Ballieue-image.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.IssamFissoune.Ballieue"
     },
     "web": {
       "bundler": "metro",
