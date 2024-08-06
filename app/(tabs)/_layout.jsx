@@ -3,6 +3,7 @@ import {Tabs, Redirect} from "expo-router";
 import React from 'react'
 
 import {icons} from "../../constants"
+import {useGlobalContext} from "../../context/GlobalProvider";
 
 const TabIcon = ({icon, color, name, focused}) => {
     return (
@@ -20,15 +21,18 @@ const TabIcon = ({icon, color, name, focused}) => {
     )
 }
 const TabsLayout = () => {
+    const { themeMode } = useGlobalContext();
+
+
     return (
         <>
             <Tabs
                 screenOptions={{
                     tabBarShowLabel: false,
-                    tabBarActiveTintColor: "#A83E2A",
+                    tabBarActiveTintColor: "#FF7518",
                     tabBarInactiveTintColor: "#FFF",
                     tabBarStyle: {
-                        backgroundColor: "#2D6B51",
+                        backgroundColor: themeMode === 'dark' ? "#000" : "#2D6B51", // Change background color based on theme
                         borderTopWidth: 1,
                         borderTopColor: '#232533',
                         height: 85,

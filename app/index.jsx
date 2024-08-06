@@ -6,11 +6,14 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import {images} from "../constants"
 import CustomButton from "../components/CustomButton";
 import {useGlobalContext} from "../context/GlobalProvider";
+import {logout} from "../lib/appwrite";
 
 const Index = () => {
     const {isLoading, isLoggedIn} = useGlobalContext()
 
     if(!isLoading && isLoggedIn ) return <Redirect href="/home"/>
+
+
     return (
         <SafeAreaView className="bg-primary h-full">
             <ScrollView contentContainerStyle={{height: '100%'}}>
@@ -34,7 +37,7 @@ const Index = () => {
                   <CustomButton
                     title="Inloggen met Email"
                     handlePress={()=>router.push('/sign-in')}
-                    containerStyles="w-full mt-7"
+                    containerStyles="w-full mt-7 h-[55]"
                   />
               </View>
             </ScrollView>

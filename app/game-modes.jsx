@@ -1,11 +1,14 @@
-import {View, Text} from 'react-native'
-import React from 'react'
+import {useGlobalContext} from "../context/GlobalProvider";
+import {logout} from "../lib/appwrite";
+import {Text, View} from "react-native";
+import CustomButton from "../components/CustomButton";
+import React from "react";
 
-const GameModes = () => {
+const CharacterScreen = () => {
+
     return (
         <View>
-            <Text>GameModes</Text>
+
         </View>
     )
 }
-export default GameModes

@@ -1,11 +1,11 @@
 import {View, Text} from 'react-native'
 import React from 'react'
 
-const Achievements = () => {
+const LeaderBoard = () => {
     return (
         <View>
-            <Text>Achievements</Text>
+            <Text>LeaderBoard</Text>
         </View>
     )
 }
-export default Achievements
+export default LeaderBoard

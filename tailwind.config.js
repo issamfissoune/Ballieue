@@ -8,6 +8,7 @@ module.exports = {
         secondary: '#16B874',
         highlight: '#1CEB95',
         contrast: '#FF7518',
+        dark: "#ff8c00",
       },
       fontFamily: {
         pthin: ["Poppins-Thin", "sans-serif"],
